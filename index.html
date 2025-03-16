@@ -72,7 +72,7 @@
     <!-- header start -->
     <header class="section header">
         <img src="image/Logo.png" alt="Logo">
-        <nav>
+        <nav class="burger-menu">
             <ul>
                 <li>
                     <a href>Главная</a>
@@ -111,9 +111,28 @@
                     </svg>
                 </li>
             </ul>
+            <button class="yellow-btn openFeedbackModal">Обратный звонок</button>
         </nav>
         <button class="yellow-btn openFeedbackModal">Обратный звонок</button>
+        <div class="burger-btn">
+            <svg class="burger-menu-open" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="43" height="43" rx="9" fill="#F5F5F5" stroke="#EBEBEB" stroke-width="2" />
+                <path d="M15 17H30" stroke="#1E1E1E" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+                <path d="M15 23H30" stroke="#1E1E1E" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+                <path d="M15 29H30" stroke="#1E1E1E" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+            </svg>
+
+            <svg class="burger-menu-close" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="43" height="43" rx="9" fill="#F5F5F5" stroke="#EBEBEB" stroke-width="2" />
+                <path d="M17.1968 17.6967L27.8034 28.3033" stroke="#1E1E1E" stroke-opacity="0.5" stroke-width="2"
+                    stroke-linecap="round" />
+                <path d="M17.1968 28.3033L27.8034 17.6967" stroke="#1E1E1E" stroke-opacity="0.5" stroke-width="2"
+                    stroke-linecap="round" />
+            </svg>
+        </div>
     </header>
+
+    <div class="burger-menu-filter"></div>
     <!-- header start -->
 
     <!-- intro start -->
@@ -150,7 +169,7 @@
                         <li>Интернет-магазины</li>
                     </ul>
                     <div class="work-types-item_button">
-                        <button class="yellow-btn btn-with-arrow">Подробнее</button>
+                        <button class="btn-with-arrow white-btn">Подробнее</button>
                     </div>
                 </div>
             </div>
@@ -450,7 +469,7 @@
     <div class="page-type">
         <h2 class="title">Разрабатываем <span>3 вида</span> сайтов
             на платформе 1С-Битрикс</h2>
-        <div class="page-type-block">
+        <div class="page-type-block page-type-block-1">
             <div class="page-type-item">
                 <div class="page-type-picture-block">
                     <img src="image/pagetype1.png" alt="image">
@@ -475,7 +494,7 @@
                             <li>Адаптивный дизайн: удобство для покупателей на любых устройствах.</li>
                         </ul>
                     </div>
-                    <button class="yellow-btn btn-with-arrow">Узнать цену</button>
+                    <button class="btn-with-arrow white-btn">Узнать цену</button>
                 </div>
             </div>
             <div class="page-type-item">
@@ -528,6 +547,99 @@
                     <button class="btn-with-arrow white-btn">Узнать цену</button>
                 </div>
             </div>
+        </div>
+        <div class="page-type-block page-type-swiper swiper">
+            <div class="swiper-wrapper">
+                <div class="page-type-item swiper-slide">
+                    <div class="page-type-picture-block">
+                        <img src="image/pagetype1.png" alt="image">
+                    </div>
+                    <div class="page-type-item-bottom">
+                        <div class="page-type-substitle">
+                            <h3>Интернет-магазин</h3>
+                            <span>Создайте мощный и надежный интернет-магазин на платформе 1С-Битрикс. Управляйте
+                                товарами,
+                                заказами, клиентами и маркетингом в единой системе. Получите все необходимые инструменты
+                                для
+                                успешных онлайн-продаж.</span>
+                        </div>
+                        <div class="page-type-item-info">
+                            <h4>Преимущества:</h4>
+                            <ul>
+                                <li>Интеграция с 1С: автоматизация учета
+                                    и обмена данными.</li>
+                                <li>Каталог товаров с гибкой настройкой фильтров и сортировок.</li>
+                                <li>Модули оплаты и доставки: подключение любых платежных систем.</li>
+                                <li>Личный кабинет клиента с историей заказов и бонусной программой.</li>
+                                <li>SEO-оптимизация: продвижение вашего магазина в поисковых системах.</li>
+                                <li>Маркетинговые инструменты: акции, скидки, рассылки.</li>
+                                <li>Адаптивный дизайн: удобство для покупателей на любых устройствах.</li>
+                            </ul>
+                        </div>
+                        <button class="btn-with-arrow white-btn">Узнать цену</button>
+                    </div>
+                </div>
+                <div class="page-type-item swiper-slide">
+                    <div class="page-type-picture-block">
+                        <img src="image/pagetype2.png" alt="image">
+                    </div>
+                    <div class="page-type-item-bottom">
+                        <div class="page-type-substitle">
+                            <h3>Лендинг</h3>
+                            <span>Быстро и эффективно запустите продающий лендинг на платформе 1С-Битрикс.
+                                Сосредоточьтесь
+                                на конверсии и получите максимальный результат от вашей рекламной кампании.</span>
+                        </div>
+                        <div class="page-type-item-info">
+                            <h4>Преимущества:</h4>
+                            <ul>
+                                <li>Простота создания и настройки: интуитивно понятный интерфейс.</li>
+                                <li>Адаптивный дизайн: корректное отображение на всех устройствах.</li>
+                                <li>SEO-оптимизация: привлечение целевого трафика из поисковых систем.</li>
+                                <li>Интеграция с CRM: сбор лидов и управление клиентами.</li>
+                                <li>A/B-тестирование: оптимизация конверсии.</li>
+                                <li>Аналитика: отслеживание эффективности лендинга.</li>
+                                <li>Быстрый запуск: минимальные сроки разработки.</li>
+                            </ul>
+                        </div>
+                        <button class="btn-with-arrow white-btn">Узнать цену</button>
+                    </div>
+                </div>
+                <div class="page-type-item swiper-slide">
+                    <div class="page-type-picture-block">
+                        <img src="image/pagetype1.png" alt="image">
+                    </div>
+                    <div class="page-type-item-bottom">
+                        <div class="page-type-substitle">
+                            <h3>Корпоративный сайт</h3>
+                            <span>Представьте ваш бизнес в лучшем свете с профессиональным корпоративным сайтом на
+                                1С-Битрикс. Расскажите о своих услугах, команде и достижениях.</span>
+                        </div>
+                        <div class="page-type-item-info">
+                            <h4>Преимущества:</h4>
+                            <ul>
+                                <li>Индивидуальный дизайн: отражение уникальности вашего бренда.</li>
+                                <li>Удобная система управления контентом: легкость обновления информации.</li>
+                                <li>Интеграция с другими сервисами: расширение функциональности сайта.</li>
+                                <li>SEO-оптимизация: привлечение потенциальных клиентов.</li>
+                                <li>Модуль новостей и блога: поддержание актуальности информации.</li>
+                                <li>Формы обратной связи: удобство коммуникации с клиентами.</li>
+                                <li>Безопасность: защита от взлома и вирусов.</li>
+                            </ul>
+                        </div>
+                        <button class="btn-with-arrow white-btn">Узнать цену</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-change-block">
+            <div class="page-type-swiper-button-prev swiper-change-button swiper-button-prev"><img
+                    src="image/arrowLeft.png" alt="arrow-left"></div>
+
+            <div class="page-type-pagination swiper-pagination"></div>
+
+            <div class="page-type-swiper-button-next swiper-change-button swiper-button-next"><img
+                    src="image/arrowRight.png" alt="arrow-right"></div>
         </div>
     </div>
 
@@ -1096,7 +1208,7 @@
                 </div>
 
             </div>
-            
+
             <button class="yellow-btn btn-with-arrow" type="submit">Отправить</button>
         </form>
     </div>
@@ -1105,6 +1217,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/index.js"></script>
     <script src="script/script.js"></script>
 
 </body>
