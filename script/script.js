@@ -202,10 +202,45 @@ burgerMenuFilter.onclick = () => {
 const questionItems = document.querySelectorAll('.questions-item');
 const questionBtns = document.querySelectorAll('.questions-btn');
 
-questionBtns.forEach((btn, index) => {
-    btn.onclick = () => {
-        questionItems[index].classList.toggle('questions-item-active');
-    }
-})
+if (questionItems && questionBtns) {
+    questionBtns.forEach((btn, index) => {
+        btn.onclick = () => {
+            questionItems[index].classList.toggle('questions-item-active');
+        }
+    })    
+}
 
 // questions end
+
+// tab start 
+
+function tabSelector(tab, item, classNameTab, classNameItem) {
+    tab.forEach((btn, index) => {
+        btn.onclick = () => {
+           tab.forEach(c => c.classList.remove(classNameTab));
+           btn.classList.add(classNameTab);
+           item.forEach(c => c.classList.remove(classNameItem));
+           item[index].classList.add(classNameItem);
+        }
+    })
+}
+
+// tab end 
+
+function pictureChanger(image, srclinkDesktop, srclinkLaptop, srclinkMob) {
+    function updatePic() {
+        if (window.innerWidth > 1000) {
+            image.src = srclinkDesktop;
+        }
+        else if (window.innerWidth < 1000 && window.innerWidth > 750 && srclinkLaptop) {
+            image.src = srclinkLaptop;
+        }
+        else if (window.innerWidth < 750 && srclinkMob) {
+            image.src = srclinkMob;
+        }
+    }
+
+    updatePic();
+
+    window.addEventListener('resize', updatePic);
+}
