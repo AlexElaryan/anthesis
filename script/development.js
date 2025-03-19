@@ -7,7 +7,6 @@ tabSelector(complectTab, complectItem, 'devpage-complect-tab-active', 'devpage-c
 // -----------------
 
 const devsiteCmsPic = document.querySelector('.dev-site-cms-left img:last-of-type');
-const introBg = document.querySelector('.intro-block > img');
 
 window.addEventListener('DOMContentLoaded', pictureChanger(devsiteCmsPic, 'image/sitecmspicfig.png', 'image/sitecmspicfiglap.png'));
 window.addEventListener('DOMContentLoaded', pictureChanger(introBg, 'image/devIntroBg.png', 'image/devintrobglap.png'));

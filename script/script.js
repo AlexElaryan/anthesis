@@ -207,7 +207,7 @@ if (questionItems && questionBtns) {
         btn.onclick = () => {
             questionItems[index].classList.toggle('questions-item-active');
         }
-    })    
+    })
 }
 
 // questions end
@@ -217,15 +217,20 @@ if (questionItems && questionBtns) {
 function tabSelector(tab, item, classNameTab, classNameItem) {
     tab.forEach((btn, index) => {
         btn.onclick = () => {
-           tab.forEach(c => c.classList.remove(classNameTab));
-           btn.classList.add(classNameTab);
-           item.forEach(c => c.classList.remove(classNameItem));
-           item[index].classList.add(classNameItem);
+            tab.forEach(c => c.classList.remove(classNameTab));
+            btn.classList.add(classNameTab);
+            item.forEach(c => c.classList.remove(classNameItem));
+            item[index].classList.add(classNameItem);
         }
     })
 }
 
 // tab end 
+
+
+// picture changer
+
+const introBg = document.querySelector('.intro-block > img');
 
 function pictureChanger(image, srclinkDesktop, srclinkLaptop, srclinkMob) {
     function updatePic() {
@@ -243,4 +248,24 @@ function pictureChanger(image, srclinkDesktop, srclinkLaptop, srclinkMob) {
     updatePic();
 
     window.addEventListener('resize', updatePic);
+}
+
+// text changer
+
+function textChanger(text, desktoptext, laptoptext, mobiletext) {
+    function updateText() {
+        if (window.innerWidth > 1000) {
+            text.innerHTML = `${desktoptext}`;
+        }
+        else if (window.innerWidth < 1000 && window.innerWidth > 750 && laptoptext) {
+            text.innerHTML = `${laptoptext}`;
+        }
+        else if (window.innerWidth < 750 && mobiletext) {
+            text.innerHTML = `${mobiletext}`;
+        }
+    }
+
+    updateText();
+
+    window.addEventListener('resize', updateText);
 }
