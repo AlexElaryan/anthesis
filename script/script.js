@@ -70,6 +70,22 @@ if (document.querySelector('.comments-swiper')) {
     });
 }
 
+if (document.querySelector('.service-page-swiper')) {
+    new Swiper(".service-page-swiper", {
+        loop: true,
+        pagination: {
+            el: '.service-page-swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".service-page-swiper-button-next",
+            prevEl: ".service-page-swiper-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+    });
+}
+
 // modals 
 
 const modal = document.querySelectorAll('.modal');

@@ -779,10 +779,31 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s;
+}
+
+.history-href:hover {
+    background: rgba(255, 187, 4, 1);
+}
+
+.history-href svg, .history-href svg path {
+    transition: .3s;
+}
+
+.history-href:hover svg {
+    transform: rotate(-45deg);
+}
+
+.history-href:hover svg path {
+    fill: rgba(30, 30, 30, 1);
 }
 
 .history-href-first {
     background: rgba(255, 187, 4, 1);
+}
+
+.history-href-first:hover svg {
+    transform: rotate(0);
 }
 
 .history-item>a {
@@ -927,6 +948,11 @@ h1 {
     border-bottom: 3px solid rgba(30, 30, 30, 1);
     color: rgba(30, 30, 30, 1);
     position: relative;
+    transition: .3s;
+}
+
+.priorites-item a:hover {
+    border-color: rgba(255, 187, 4, 1);
 }
 
 .priorites-item a::before {
@@ -944,6 +970,7 @@ h1 {
     right: auto;
     left: 0;
 }
+
 
 /* priorites end */
 
@@ -2720,8 +2747,15 @@ footer .navbar-dropdown {
     margin-top: 20px;
 }
 
+@media screen and (min-width:1000px) {
+    .service-page .services-block .swiper-wrapper {
+        transform: none !important;
+    }
+}
+
+
 .services-block-index {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -2739,26 +2773,10 @@ footer .navbar-dropdown {
     white-space: pre-line;
 }
 
-.services .swiper-change-block {
+.service-page .swiper-change-block {
     display: none;
 }
 
-.block-pagination {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.block-pagination span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(235, 235, 235, 1);
-}
-
-.block-pagination span.blck-active-pagination {
-    background: rgba(255, 187, 4, 1);
-}
 
 /* services end */
 
@@ -2769,7 +2787,7 @@ footer .navbar-dropdown {
 }
 
 .portfolio-block-index {
-    display: grid;
+    display: grid !important;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -2783,7 +2801,7 @@ footer .navbar-dropdown {
 /* comments-page start */
 
 .comments-block-index {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     row-gap: 20px;
@@ -5640,6 +5658,20 @@ footer .navbar-dropdown {
         display: flex;
     }
 }
+
+@media screen and (max-width:480px) {
+    .dev-feedback-cont .title {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:385px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+
 
 /* responsive end */
 /* responsive end */
